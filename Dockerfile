@@ -8,5 +8,7 @@ RUN npm run build
 #/app/build the path of built file
 
 FROM nginx
+#EXPOSE ONLY FOR ELASTIC BEANSTALK
+EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html
 
